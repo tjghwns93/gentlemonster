@@ -37,8 +37,15 @@ for (let i = 1; i <= 7; i++) {
 
 const sonHeader = document.querySelectorAll('.son-header-ani');
 const sonVideo = document.querySelector('.son-video');
+const sonFace = document.querySelectorAll('.son-cut-face img');
+const sonFace1 = document.querySelector('.son-cut-face1');
+
 
 window.addEventListener('scroll', () => {
+
+  const sonFaceTop = sonFace1.getBoundingClientRect().top;
+  const sonFaceRatio = (window.innerHeight - sonFaceTop) / window.innerHeight;
+
 
   sonHeader.forEach(a => {
     if (a.getBoundingClientRect().top < (window.innerHeight - 80)) {
@@ -50,10 +57,17 @@ window.addEventListener('scroll', () => {
 
   if (sonVideo.getBoundingClientRect().top < window.innerHeight && sonVideo.currentTime == 0) {
     sonVideo.play();
-  } else if(sonVideo.getBoundingClientRect().top < window.innerHeight && sonVideo.currentTime == 100){
+  } else if (sonVideo.getBoundingClientRect().top < window.innerHeight && sonVideo.currentTime == 100) {
     sonVideo.pause();
-  }else if(sonVideo.getBoundingClientRect().top > window.innerHeight){
+  } else if (sonVideo.getBoundingClientRect().top > window.innerHeight) {
     sonVideo.currentTime = 0;
+  }
+
+  if(sonFaceTop > (window.innerHeight * 1) / 3 && sonFaceTop <= window.innerHeight){
+
+    sonFace.forEach(a=>{
+      a.style.transform = `scale(${1.5 - sonFaceRatio * 0.75})`;
+    })
   }
 
 });

@@ -132,16 +132,17 @@ header {
         width: 100%;
         height: 100%;
         padding-top: 20vw;
-        padding-left: 20vw;
+        padding-left: 25vw;
 
 
         .banner-content {
             text-align: center;
-            width: 540px;
+            // width: 540px;
             color: #343434;
+            width: 29vw;
 
             h2 {
-                font-size: 88px;
+                font-size: 4.583vw;
                 line-height: 0.933;
                 letter-spacing: -0.888px;
                 font-family: "Lora", serif;
@@ -149,7 +150,7 @@ header {
             }
 
             p {
-                font-size: 13px;
+                font-size: .781vw;
                 margin-top: 1.822vw;
                 line-height: 1.533;
             }
@@ -333,12 +334,9 @@ header {
             width: 100%;
         }
 
-        .son-cut-face1 {
+        .son-cut-face {
             width: calc(50% - 1px);
-        }
-
-        .son-cut-face2 {
-            width: calc(50% - 1px);
+            overflow: hidden;
         }
     }
 }

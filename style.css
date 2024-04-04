@@ -1,0 +1,392 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  word-break: keep-all;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img,
+video {
+  width: 100%;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 30px;
+  z-index: 999;
+}
+header .logo {
+  width: 239px;
+}
+header .menu {
+  display: flex;
+}
+header .menu li {
+  margin-left: 24px;
+  font-size: 13px;
+}
+header .search {
+  display: flex;
+}
+header .search li {
+  margin-left: 30px;
+  font-size: 20px;
+}
+header .search .menu-bar {
+  display: none;
+  width: 28px;
+  height: 22px;
+  position: relative;
+}
+header .search .menu-bar .bar1 {
+  position: absolute;
+  top: 6px;
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  transition: 0.5s;
+}
+header .search .menu-bar .bar2 {
+  position: absolute;
+  bottom: 5px;
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  transition: 0.5s;
+}
+header .search .menu-bar-on .bar1 {
+  top: 12px;
+  width: 90%;
+  transform: rotate(45deg);
+}
+header .search .menu-bar-on .bar2 {
+  bottom: 8px;
+  width: 90%;
+  transform: rotate(-45deg);
+}
+
+.banner {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: 48.906vw;
+}
+.banner .banner-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding-top: 20vw;
+  padding-left: 20vw;
+}
+.banner .banner-back .banner-content {
+  text-align: center;
+  width: 540px;
+  color: #343434;
+}
+.banner .banner-back .banner-content h2 {
+  font-size: 88px;
+  line-height: 0.933;
+  letter-spacing: -0.888px;
+  font-family: "Lora", serif;
+  font-weight: 400;
+}
+.banner .banner-back .banner-content p {
+  font-size: 13px;
+  margin-top: 1.822vw;
+  line-height: 1.533;
+}
+.banner .swiper {
+  height: 100%;
+  width: auto;
+  pointer-events: none;
+}
+.banner .swiper .swiper-img {
+  width: 100%;
+  height: 100%;
+  padding-left: 50vw;
+}
+.banner .swiper .swiper-img img {
+  height: 100%;
+  width: auto;
+}
+.banner .swiper .swiper-img .img1 {
+  transform: scale(1.3) translateY(-30px);
+}
+.banner .swiper .swiper-img .img2 {
+  transform: scale(1.35) translateY(-43px);
+}
+.banner .swiper .swiper-img .img3 {
+  transform: scale(1.35) translateY(-55px);
+}
+.banner .swiper .swiper-img .img4 {
+  transform: scale(1.15) translateY(-37px);
+}
+.banner .swiper .swiper-img .img5 {
+  transform: scale(1.15) translateY(-16px);
+}
+.banner .swiper .swiper-img .img6 {
+  transform: scale(1.1) translateY(-17px);
+}
+.banner .swiper .swiper-img .img7 {
+  transform: scale(1.2) translateY(-15px);
+}
+
+.collection {
+  width: 100%;
+}
+.collection h2 {
+  font-size: 35px;
+  text-align: center;
+  padding: 6.77vw 0 2.864vw;
+  line-height: 1;
+  font-family: "Lora", serif;
+  font-weight: 400;
+}
+.collection .product-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1px;
+}
+.collection .product-wrap .product-large {
+  width: calc(50% - 1px);
+  position: relative;
+  cursor: pointer;
+}
+.collection .product-wrap .product-large .col1-1 {
+  display: none;
+}
+.collection .product-wrap .product-large:hover .col1 {
+  display: none;
+}
+.collection .product-wrap .product-large:hover .col1-1 {
+  display: block;
+}
+.collection .product-wrap .product-small {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0px 1px;
+  width: calc(50% - 1px);
+}
+.collection .product-wrap .product-small .product-small-img {
+  position: relative;
+  width: calc(50% - 1px);
+  cursor: pointer;
+}
+.collection .product-wrap .product-small .product-small-img .col1-1 {
+  display: none;
+}
+.collection .product-wrap .product-small .product-small-img:hover .col1 {
+  display: none;
+}
+.collection .product-wrap .product-small .product-small-img:hover .col1-1 {
+  display: block;
+}
+.collection .product-wrap .product-info {
+  position: absolute;
+  left: 25px;
+  bottom: 32px;
+}
+.collection .product-wrap .product-info .product-name {
+  height: 8px;
+  margin-bottom: 9px;
+  font-size: 12px;
+  font-family: "Lora", serif;
+  font-weight: 400;
+  line-height: 20px;
+}
+.collection .product-wrap .product-info .product-link {
+  font-size: 11px;
+  line-height: 20px;
+  text-decoration: underline;
+}
+
+.son {
+  margin-top: 35vh;
+}
+.son .son-header {
+  padding: 0 5vw;
+  overflow: hidden;
+  display: flex;
+  font-size: 5.2vw;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+}
+.son .son-header .son-header-ani {
+  transition: 1s;
+}
+.son .son-header .son-header-ani:nth-child(2) {
+  transition: 1s 0.2s;
+}
+.son .son-header .son-header-ani:nth-child(3) {
+  transition: 1s 0.4s;
+}
+.son .son-cut {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 40%;
+  margin: 100px auto 0;
+  gap: 0px 1px;
+}
+.son .son-cut .son-cut-video {
+  width: 100%;
+}
+.son .son-cut .son-cut-face1 {
+  width: calc(50% - 1px);
+}
+.son .son-cut .son-cut-face2 {
+  width: calc(50% - 1px);
+}
+
+.son-product {
+  margin-top: 120px;
+}
+.son-product p {
+  text-align: center;
+}
+.son-product .son-product-swiper {
+  margin-top: 50px;
+  padding-bottom: 50px;
+}
+.son-product .son-product-swiper .son-product-prev {
+  transform: scale(0.3);
+  color: #000;
+  font-weight: bold;
+  top: auto;
+  bottom: -4px;
+  left: calc(50% - 60px);
+  z-index: 100;
+}
+.son-product .son-product-swiper .son-product-next {
+  transform: scale(0.3);
+  color: #000;
+  font-weight: bold;
+  top: auto;
+  bottom: -4px;
+  right: calc(50% - 60px);
+  z-index: 100;
+}
+.son-product .son-product-swiper .son-product-1-next,
+.son-product .son-product-swiper .son-product-2-next,
+.son-product .son-product-swiper .son-product-3-next,
+.son-product .son-product-swiper .son-product-4-next,
+.son-product .son-product-swiper .son-product-5-next,
+.son-product .son-product-swiper .son-product-6-next,
+.son-product .son-product-swiper .son-product-7-next,
+.son-product .son-product-swiper .son-product-1-prev,
+.son-product .son-product-swiper .son-product-2-prev,
+.son-product .son-product-swiper .son-product-3-prev,
+.son-product .son-product-swiper .son-product-4-prev,
+.son-product .son-product-swiper .son-product-5-prev,
+.son-product .son-product-swiper .son-product-6-prev,
+.son-product .son-product-swiper .son-product-7-prev {
+  transform: scale(0.5);
+  color: #000;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.son-product .son-product-swiper .swiper-slide:hover .swiper-button-next,
+.son-product .son-product-swiper .swiper-slide:hover .swiper-button-prev {
+  opacity: 1;
+}
+.son-product .son-product-info {
+  text-align: right;
+}
+
+.popup {
+  margin-top: 150px;
+  padding-bottom: 20vh;
+  text-align: center;
+}
+.popup .popup-img {
+  margin: 50px 0;
+  width: 100%;
+  height: 80vh;
+  background: url("https://raw.githubusercontent.com/tjghwns93/gentlemonster-images/main/pop-up.webp") no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.popup .popup-info p {
+  font-size: 13px;
+  line-height: 24px;
+}
+.popup .popup-info p:first-child {
+  text-decoration: underline;
+}
+.popup .coomingsoon {
+  margin-top: 20px;
+}
+.popup .coomingsoon p {
+  display: inline-block;
+  color: #fff;
+  background-color: #000;
+  padding: 15px;
+  border-radius: 50px;
+}
+
+footer {
+  width: 100%;
+  padding: 56px 60px 32px;
+  background: #f7f7f7;
+  color: #343434;
+}
+footer .footer-link {
+  display: flex;
+}
+footer .footer-link ul {
+  max-width: 303px;
+  width: 100%;
+}
+footer .footer-link ul li {
+  padding: 3px 0 4px;
+  font-size: 12px;
+  color: #858585;
+}
+footer .footer-link ul li:first-child {
+  padding-bottom: 16px;
+  font-size: 13px;
+  color: #343434;
+}
+footer .footer-info {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 75px;
+  font-size: 15px;
+}
+footer .footer-info p {
+  min-width: 250px;
+  max-width: 250px;
+  font-family: "Lora", serif;
+}
+footer .footer-info > div {
+  font-size: 11px;
+}/*# sourceMappingURL=style.css.map */

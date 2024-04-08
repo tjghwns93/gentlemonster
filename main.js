@@ -1,6 +1,6 @@
 /////////////////// swiper /////////////////////
 
-const bannerSwiper = new Swiper('banner .swiper', {
+const bannerSwiper = new Swiper('.banner .swiper', {
   loop: true,
   speed: 5000,
   autoplay: {

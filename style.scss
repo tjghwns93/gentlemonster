@@ -52,7 +52,6 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 20px 30px;
-    z-index: 999;
 
     .logo {
         width: 239px;
@@ -100,37 +99,122 @@ header {
             }
         }
 
-        .menu-bar-on {
 
-            .bar1 {
-                top: 12px;
-                width: 90%;
-                transform: rotate(45deg);
+    }
+
+    aside {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 385px;
+        height: 100vh;
+        background: #fff;
+        z-index: 111;
+        transform: translateX(100%);
+        transition: transform 0.6s ease;
+        padding: 60px 40px 40px;
+
+        .aside-item1 li a {
+            display: block;
+            line-height: 47px;
+            font-size: 24px;
+        }
+
+        .aside-item2 {
+            margin-top: 30px;
+
+            li a {
+                display: block;
+                line-height: 37px;
+                font-size: 17px;
             }
+        }
 
-            .bar2 {
-                bottom: 8px;
-                width: 90%;
-                transform: rotate(-45deg);
+        .aside-item3 {
+            position: absolute;
+            bottom: 45px;
+            left: 40px;
+
+            li a {
+                display: block;
+                line-height: 29px;
+                font-size: 13px;
             }
         }
     }
+
+    .aside-btn {
+        position: fixed;
+        top: 15px;
+        right: 15px;
+        width: 25px;
+        height: 25px;
+        z-index: 112;
+        opacity: 0;
+        visibility: hidden;
+
+        .bar3 {
+            position: absolute;
+            top: 11.5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: #000;
+            transition: transform 0.3s 0.3s;
+
+        }
+
+        .bar4 {
+            position: absolute;
+            top: 11.5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: #000;
+            transition: transform 0.3s 0.3s;
+        }
+    }
+
+    .aside-btn-on {
+
+        .bar3 {
+            transform: rotate(45deg);
+        }
+
+        .bar4 {
+            transform: rotate(-45deg);
+        }
+    }
+
+    .aside-bg {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 110;
+        background: rgba(0, 0, 0, 0.38);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.6s ease, visibility 0.6s ease;
+    }
+
 }
 
+///////////////////// BANNER //////////////////
+///////////////////// BANNER //////////////////
 ///////////////////// BANNER //////////////////
 
 .banner {
     position: relative;
     width: 100%;
     overflow: hidden;
-    height: 48.906vw;
 
     .banner-back {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
-        height: 100%;
         padding-top: 20vw;
         padding-left: 25vw;
 
@@ -158,7 +242,7 @@ header {
     }
 
     .swiper {
-        height: 100%;
+        height: 48.906vw;
         width: auto;
         pointer-events: none;
 
@@ -201,9 +285,19 @@ header {
             }
         }
     }
+
+    .banner-p {
+        display: none;
+        font-size: 11px;
+        text-align: center;
+        margin: 8vw 10.933vw;
+        line-height: 1.533;
+    }
 }
 
 
+/////////////////// collection /////////////////////
+/////////////////// collection /////////////////////
 /////////////////// collection /////////////////////
 
 .collection {
@@ -297,6 +391,8 @@ header {
 
 
 ///////////////// SON ////////////////////
+///////////////// SON ////////////////////
+///////////////// SON ////////////////////
 
 .son {
     margin-top: 35vh;
@@ -326,16 +422,16 @@ header {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        width: 40%;
+        width: 1000px;
         margin: 100px auto 0;
-        gap: 0px 1px;
+        gap: 0 4px;
 
         .son-cut-video {
             width: 100%;
         }
 
         .son-cut-face {
-            width: calc(50% - 1px);
+            width: calc(50% - 2px);
             overflow: hidden;
         }
     }
@@ -360,7 +456,7 @@ header {
             color: #000;
             font-weight: bold;
             top: auto;
-            bottom: -4px ; 
+            bottom: -4px;
             left: calc(50% - 60px);
             z-index: 100;
         }
@@ -370,7 +466,7 @@ header {
             color: #000;
             font-weight: bold;
             top: auto;
-            bottom: -4px ; 
+            bottom: -4px;
             right: calc(50% - 60px);
             z-index: 100;
         }
@@ -411,6 +507,8 @@ header {
 }
 
 
+////////////////// POPUP ///////////////////////
+////////////////// POPUP ///////////////////////
 ////////////////// POPUP ///////////////////////
 
 .popup {
@@ -456,6 +554,8 @@ header {
 
 
 /////////////  footer ///////////////////
+/////////////  footer ///////////////////
+/////////////  footer ///////////////////
 
 footer {
     width: 100%;
@@ -485,6 +585,27 @@ footer {
         }
     }
 
+    .footer-link-tab {
+        display: none;
+
+        ul li {
+            position: relative;
+            border-bottom: 1px solid #e0e0e0;
+            font-size: 13px;
+            padding: 14px 0 15px;
+
+            &::after {
+                content: '+';
+                display: block;
+                position: absolute;
+                top: 50%;
+                right: 0;
+                transform: translateY(-50%);
+                cursor: pointer;
+            }
+        }
+    }
+
     .footer-info {
         display: flex;
         justify-content: space-between;
@@ -499,6 +620,372 @@ footer {
 
         &>div {
             font-size: 11px;
+        }
+    }
+}
+
+
+
+/////////////////////////// media ///////////////////////////////
+/////////////////////////// media ///////////////////////////////
+/////////////////////////// media ///////////////////////////////
+
+@media only screen and (min-width: 0px) and (max-width: 599px) {
+
+    header {
+
+        .logo {
+            width: 210px;
+        }
+
+        .menu {
+            display: none;
+        }
+
+        .search {
+            align-items: center;
+
+            .menu-bar {
+                display: block;
+            }
+
+            li {
+                font-size: 16px;
+            }
+        }
+    }
+
+    .banner {
+
+        .banner-back {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: static;
+            margin-top: 13.671vw;
+            margin-bottom: 5vw;
+            padding: 0;
+            text-align: center;
+
+            .banner-content {
+                width: auto;
+
+                h2 {
+                    font-size: 32px;
+                    font-weight: 600;
+                }
+
+                p {
+                    display: none;
+                }
+            }
+        }
+
+        .swiper {
+            height: 96.223vw;
+            margin-top: -11.784vw;
+
+            .swiper-img {
+                padding: 0;
+                text-align: center;
+            }
+        }
+
+        .banner-p {
+            display: block;
+        }
+
+    }
+
+    .collection {
+
+        h2 {
+            padding: 15.77vw 0 2.864vw;
+        }
+
+        .product-wrap {
+
+            .product-large {
+                width: 100%;
+            }
+
+            .product-small {
+                width: 100%;
+            }
+        }
+    }
+
+    .son {
+
+        .son-header {
+            font-size: 8vw;
+        }
+
+        .son-cut {
+            width: 95%;
+            gap: 4px;
+
+            .son-cut-face {
+                width: 100%;
+            }
+        }
+    }
+
+    .popup {
+
+        .popup-img {
+            margin: 20px 0;
+        }
+    }
+
+    footer {
+        padding: 20px;
+
+        .footer-link {
+            display: none;
+        }
+
+        .footer-link-tab {
+            display: block;
+        }
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+
+    header {
+
+        .logo {
+            width: 210px;
+        }
+
+        .menu {
+            display: none;
+        }
+
+        .search {
+            align-items: center;
+
+            .menu-bar {
+                display: block;
+            }
+        }
+    }
+
+    .banner {
+
+        .banner-back {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: static;
+            margin-top: 13.671vw;
+            margin-bottom: 5vw;
+            padding: 0;
+            text-align: center;
+
+            .banner-content {
+                width: auto;
+
+                h2 {
+                    font-size: 45px;
+                    font-weight: 600;
+                }
+
+                p {
+                    display: none;
+                }
+            }
+        }
+
+        .swiper {
+            height: 96.223vw;
+            margin-top: -11.784vw;
+
+            .swiper-img {
+                padding: 0;
+                text-align: center;
+            }
+        }
+
+        .banner-p {
+            display: block;
+        }
+
+    }
+
+    .collection {
+
+        .product-wrap {
+
+            .product-large {
+                width: 100%;
+            }
+
+            .product-small {
+                width: 100%;
+            }
+        }
+    }
+
+    .son {
+
+        .son-header {
+            font-size: 8vw;
+        }
+
+        .son-cut {
+            width: 95%;
+            gap: 4px;
+
+            .son-cut-face {
+                width: 100%;
+            }
+        }
+    }
+
+    .popup {
+
+        .popup-img {
+            margin: 20px 0;
+        }
+    }
+
+    footer {
+        padding: 20px;
+
+        .footer-link {
+            display: none;
+        }
+
+        .footer-link-tab {
+            display: block;
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+    header {
+
+        .logo {
+            width: 210px;
+        }
+
+        .menu {
+            display: none;
+        }
+
+        .search {
+            align-items: center;
+
+            .menu-bar {
+                display: block;
+            }
+        }
+    }
+
+    .banner {
+
+        .banner-back {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: static;
+            margin-top: 13.671vw;
+            padding: 0;
+            text-align: center;
+
+            .banner-content {
+                width: auto;
+
+                h2 {
+                    font-size: 62px;
+                    font-weight: 600;
+                }
+
+                p {
+                    width: 48.177vw;
+                    margin: 4.557vw auto 0;
+                    font-size: 15px;
+                }
+            }
+        }
+
+        .swiper {
+            height: 96.223vw;
+            margin-top: -11.784vw;
+
+            .swiper-img {
+                padding: 0;
+                text-align: center;
+            }
+        }
+
+
+    }
+
+    .son {
+
+        .son-cut {
+            width: 750px;
+        }
+    }
+
+    .popup {
+
+        .popup-img {
+            margin: 20px 0;
+        }
+    }
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1279px) {
+
+    .banner {
+
+        .banner-back {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: static;
+            margin-top: 13.671vw;
+            padding: 0;
+            text-align: center;
+
+            .banner-content {
+                width: auto;
+
+                h2 {
+                    font-size: 88px;
+                    font-weight: 600;
+                }
+
+                p {
+                    width: 48.177vw;
+                    margin: 4.557vw auto 0;
+                    font-size: 15px;
+                }
+            }
+        }
+
+        .swiper {
+            height: 96.223vw;
+            margin-top: -11.784vw;
+
+            .swiper-img {
+                padding: 0;
+                text-align: center;
+            }
+        }
+
+
+    }
+
+    .popup {
+
+        .popup-img {
+            margin: 20px 0;
         }
     }
 }

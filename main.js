@@ -1,6 +1,6 @@
 /////////////////// swiper /////////////////////
 
-const bannerSwiper = new Swiper('.banner .swiper', {
+const bannerSwiper = new Swiper('banner .swiper', {
   loop: true,
   speed: 5000,
   autoplay: {
@@ -9,8 +9,18 @@ const bannerSwiper = new Swiper('.banner .swiper', {
 });
 
 const sonProductSwiper = new Swiper(".son-product-swiper", {
-  slidesPerView: 3,
   spaceBetween: 10,
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+    },
+    600: {
+      slidesPerView: 2,
+    },
+    768: {
+      slidesPerView: 3,
+    }
+  },
   pagination: {
     el: ".swiper-pagination",
     type: "fraction",

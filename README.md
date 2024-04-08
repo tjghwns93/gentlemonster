@@ -1,8 +1,12 @@
 # 젠틀몬스터 홈페이지
 
+### 젠틀몬드터 홈페이지를 Figma로 리디자인하고 
+### JavaScript와 SCSS를 이용하여 퍼블리싱했습니다. 
+### 반응형웹으로 만들어져 모든 환경에서 사용가능합니다.
+
 ### [사이트 바로가기](https://tjghwns93.github.io/gentlemonster/)
 
 ----
 
 ![portfolio](https://github.com/tjghwns93/images/blob/main/gentlemonster.png?raw=true)
-메인베너 디자인은 [홈페이지](https://www.gentlemonster.com/kr/stories/24-optical?_gl=1*12a2ma9*_up*MQ..&gclid=Cj0KCQjwq86wBhDiARIsAJhuphlr1MVjj1h29wq6mhNiooQDZOwYN06ov2zFxWyqFBuDZ0f3XtKymYAaAg6oEALw_wcB)의 디자인을 마크업했습니다.
+

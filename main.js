@@ -81,3 +81,24 @@ window.addEventListener('scroll', () => {
   }
 
 });
+
+///////////////////// aside ////////////////////
+
+const asideOpen = document.querySelector('.menu-bar');
+const aside = document.querySelector('.aside');
+const asideClose = document.querySelector('.aside-btn');
+const asideBg = document.querySelector('.aside-bg');
+
+asideOpen.addEventListener('click', ()=>{
+  asideOpen.style.opacity = '0';
+  aside.classList.add('aside-on');
+  asideClose.classList.add('aside-btn-on');
+  asideBg.classList.add('aside-bg-on');
+})
+
+asideClose.addEventListener('click', ()=>{
+  asideOpen.style.opacity = '1';
+  aside.classList.remove('aside-on');
+  asideClose.classList.remove('aside-btn-on');
+  asideBg.classList.remove('aside-bg-on');
+})

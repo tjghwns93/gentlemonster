@@ -40,6 +40,7 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 20px 30px;
+  z-index: 90;
 }
 header .logo {
   width: 239px;
@@ -63,6 +64,7 @@ header .search .menu-bar {
   width: 28px;
   height: 22px;
   position: relative;
+  cursor: pointer;
 }
 header .search .menu-bar .bar1 {
   position: absolute;
@@ -80,7 +82,7 @@ header .search .menu-bar .bar2 {
   background-color: #000;
   transition: 0.5s;
 }
-header aside {
+header .aside {
   position: fixed;
   top: 0;
   right: 0;
@@ -89,41 +91,45 @@ header aside {
   background: #fff;
   z-index: 111;
   transform: translateX(100%);
-  transition: transform 0.6s ease;
   padding: 60px 40px 40px;
+  transition: transform 0.6s ease;
 }
-header aside .aside-item1 li a {
-  display: block;
+header .aside .aside-item1 li a {
   line-height: 47px;
   font-size: 24px;
 }
-header aside .aside-item2 {
+header .aside .aside-item2 {
   margin-top: 30px;
 }
-header aside .aside-item2 li a {
+header .aside .aside-item2 li a {
   display: block;
   line-height: 37px;
   font-size: 17px;
 }
-header aside .aside-item3 {
+header .aside .aside-item3 {
   position: absolute;
   bottom: 45px;
   left: 40px;
 }
-header aside .aside-item3 li a {
+header .aside .aside-item3 li a {
   display: block;
   line-height: 29px;
   font-size: 13px;
 }
+header .aside-on {
+  display: block;
+  transform: translateX(0);
+}
 header .aside-btn {
   position: fixed;
-  top: 15px;
-  right: 15px;
+  top: 20px;
+  right: 30px;
   width: 25px;
   height: 25px;
   z-index: 112;
   opacity: 0;
   visibility: hidden;
+  cursor: pointer;
 }
 header .aside-btn .bar3 {
   position: absolute;
@@ -143,6 +149,10 @@ header .aside-btn .bar4 {
   background: #000;
   transition: transform 0.3s 0.3s;
 }
+header .aside-btn-on {
+  opacity: 1;
+  visibility: visible;
+}
 header .aside-btn-on .bar3 {
   transform: rotate(45deg);
 }
@@ -160,6 +170,10 @@ header .aside-bg {
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+header .aside-bg-on {
+  opacity: 1;
+  visibility: visible;
 }
 
 .banner {

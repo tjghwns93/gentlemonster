@@ -762,6 +762,14 @@ footer {
         .footer-link-tab {
             display: block;
         }
+
+        .footer-info {
+            display: block;
+
+            div {
+                margin-top: 9px;
+            }
+        }
     }
 }
 
@@ -874,6 +882,14 @@ footer {
 
         .footer-link-tab {
             display: block;
+        }
+
+        .footer-info {
+            display: block;
+
+            div {
+                margin-top: 9px;
+            }
         }
     }
 }

@@ -6,6 +6,14 @@ const bannerSwiper = new Swiper('.banner .swiper', {
   autoplay: {
     delay: 500,
   },
+  breakpoints: {
+    0: {
+      spaceBetween: 35,
+    },
+    1280: {
+      spaceBetween: 0,
+    }
+  },
 });
 
 const sonProductSwiper = new Swiper(".son-product-swiper", {

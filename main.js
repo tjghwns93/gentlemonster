@@ -69,7 +69,7 @@ window.addEventListener('scroll', () => {
     if (a.getBoundingClientRect().top < (window.innerHeight - 80)) {
       a.style.transform = 'none';
     } else {
-      a.style.transform = 'translateY(100px)';
+      a.style.transform = 'translateY(200px)';
     };
   });
 

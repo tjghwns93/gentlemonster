@@ -8,5 +8,5 @@
 
 ----
 
-![portfolio](https://github.com/tjghwns93/images/blob/main/gentlemonster.png?raw=true)
+![portfolio](https://github.com/tjghwns93/gentlemonster-images/blob/main/gentlemonster-info.png?raw=true)
 
